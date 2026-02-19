@@ -1,0 +1,33 @@
+{
+  "name": "@stravigor/rag",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Vector retrieval framework for RAG in the Strav framework",
+  "license": "MIT",
+  "exports": {
+    ".": "./src/index.ts",
+    "./*": "./src/*.ts"
+  },
+  "strav": {
+    "commands": "src/commands"
+  },
+  "files": [
+    "src/",
+    "stubs/",
+    "package.json",
+    "tsconfig.json"
+  ],
+  "peerDependencies": {
+    "@stravigor/kernel": "workspace:*",
+    "@stravigor/brain": "workspace:*",
+    "@stravigor/database": "workspace:*",
+    "@stravigor/cli": "workspace:*"
+  },
+  "scripts": {
+    "test": "bun test tests/",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "commander": "^14.0.3"
+  }
+}
